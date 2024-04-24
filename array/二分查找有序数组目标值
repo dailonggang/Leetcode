@@ -1,7 +1,7 @@
-# 双指针(有序重复)
+# 二分法：有序无重复
+# 双指针，左闭右闭
 def seach(nums, target):
     left, right = 0, len(nums)-1
-    
     while left <= right:
         # 取序列中间值
         middle = (left + right) // 2
