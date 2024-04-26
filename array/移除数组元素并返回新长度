@@ -36,3 +36,16 @@ def delete(nums, val):
     return b
 
 print(delete([1, 3, 2, 3, 4, 5, 8, 3], 3))
+
+# 法二：双指针(for循环)
+def delete(nums, val):
+    low = 0
+    for fast in range(len(nums)):
+        # 如果fast对应的序列值不为目标值
+        if nums[fast] != val:
+            # 那么将fast的值存入low中
+            nums[low] = nums[fast]
+            low += 1
+    return low
+
+print(delete([1, 3, 2, 3, 4, 5, 8, 3], 3))
